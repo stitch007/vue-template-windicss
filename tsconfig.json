@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    // 允许从没有设置默认导出的模块中默认导入
+    "allowSyntheticDefaultImports": true,
+    // 解析非相对模块名的基准目录
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    // 从tslib导入辅助工具函数(比如__extends, __rest等)
+    "importHelpers": true,
+    // 指定生成哪个模块系统代码
+    "module": "ESNext",
+    // 如何处理模块
+    "moduleResolution": "node",
+    // 启用所有严格类型检查选项。
+    // 启用 --strict相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict
+    // --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization
+    "strict": true,
+    // 忽略所有的声明文件(*.d.ts)的类型检查
+    "skipLibCheck": true,
+    // 生成ECMAScript目标版本
+    "target": "es2016",
+    // 要包含的类型声明文件名列表
+    "types": [],
+    // @/components 相当于 @/src/components
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "sourceMap": true,
+    // 允许导入json
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    // 编译过程中需要引入的库文件的列表
+    "lib": [
+      "DOM",
+      "ESNext",
+      "es2015.promise",
+    ],
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
